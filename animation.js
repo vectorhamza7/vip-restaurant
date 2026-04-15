@@ -126,7 +126,7 @@ document.querySelectorAll(".menu-card").forEach((card) => {
   lt2.from(card, {
     scrollTrigger: {
       trigger: card,
-      start: "top 100%", // Start animating when card's top hits 90% of screen height
+      start: "top 110%", // Start animating when card's top hits 90% of screen height
       end: "top 70%",   // Finish animating when card's top hits 60% of screen height
       scrub: 1,
       markers: true,

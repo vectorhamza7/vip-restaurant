@@ -1,5 +1,5 @@
-function activateAR('model-1') {
-    const modelViewer = document.getElementById('model-1');
+function activateAR(modelId) {
+    const modelViewer = document.getElementById(modelId);
     
     // Check if the device supports AR
     if (modelViewer.canActivateAR) {
@@ -7,7 +7,9 @@ function activateAR('model-1') {
     } else {
         // Fallback: If AR isn't supported, show the 3D model in the card instead of the static image
         modelViewer.style.display = 'block';
-        document.getElementById('model-1').style.display = 'none';
+        if (modelViewer.previousElementSibling) {
+            modelViewer.previousElementSibling.style.display = 'none';
+        }
         alert("AR is not supported on this device, showing 3D preview instead.");
     }
 }
