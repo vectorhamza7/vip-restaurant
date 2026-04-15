@@ -98,13 +98,15 @@ lt1.from(".chef-heading", { duration: 1, y: 50, opacity: 0, ease: "power2.out" }
 lt1.from(".chef-divider", { duration: 1, y: 50, opacity: 0, ease: "power2.out" });
 let split = new SplitText(".chef-blockquote ", { type: "words" });
 lt1.from(split.words, { duration: 1, y: 50, opacity: 0, ease: "power2.out", stagger: 0.1 });
-gsap.to("#menu",{duration:0.1, y: -550 ,scrollTrigger:{
-  trigger: ".body",
-  start: "top top",
-  end: "+=500%",
-  scrub: 1,
-  pin: true,
-}});
+gsap.to("#menu", {
+  duration: 0.1, y: -550, scrollTrigger: {
+    trigger: ".body",
+    start: "top top",
+    end: "+=200%",
+    scrub: 1,
+    pin: true,
+  }
+});
 let lt2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".menu-section",
@@ -112,13 +114,13 @@ let lt2 = gsap.timeline({
     end: "+=200%",
     scrub: 1,
     markers: true,
-    
+
   }
 });
 lt2.from(".section-title", { duration: 1, x: -50, opacity: 0 });
 
-lt2.from(".label-tag", { duration: 1, x: -50, opacity: 0,delay:-1});
-lt2.from(".menu-date", { duration: 1, x: -50, opacity: 0,delay:0.2});
+lt2.from(".label-tag", { duration: 1, x: -50, opacity: 0, delay: -1 });
+lt2.from(".menu-date", { duration: 1, x: -50, opacity: 0, delay: 0.2 });
 // Animate each card precisely when the user scrolls down to its physical location
 document.querySelectorAll(".menu-card").forEach((card) => {
   lt2.from(card, {
@@ -126,7 +128,7 @@ document.querySelectorAll(".menu-card").forEach((card) => {
       trigger: card,
       start: "top 100%", // Start animating when card's top hits 90% of screen height
       end: "top 70%",   // Finish animating when card's top hits 60% of screen height
-      scrub: 1 ,
+      scrub: 1,
       markers: true,
     },
     x: 250,

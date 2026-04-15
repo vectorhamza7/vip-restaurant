@@ -156,6 +156,17 @@
                             </button>
                             <div class="menu-card-img-wrap">
                                 <img src="Plat.webp" alt="The Memory - Wagyu beef">
+                                <model-viewer 
+            id="model-1"
+            src="model-1.glb" 
+            ios-src="wagyu_beef.usdz"
+            ar 
+            ar-modes="scene-viewer quick-look" 
+            camera-controls 
+            poster="Plat.webp" 
+            shadow-intensity="1"
+            style="width: 100%; height: 100%; display: none;">
+        </model-viewer>
                             </div>
                             <div class="menu-card-body">
                                 <div class="menu-card-top">
@@ -163,7 +174,7 @@
                                     <span class="menu-card-price">$25.00</span>
                                 </div>
                                 <p class="menu-card-desc">Wagyu beef · 350g</p>
-                                <button class="menu-card-btn">
+                                <button class="menu-card-btn" onclick="activateAR('model-1')">
                                     <span class="material-symbols-outlined">
                                         view_in_ar
                                     </span> View in AR
@@ -454,7 +465,8 @@
             </div>
         </div>
     </div>
-
+    <!--model viewer-->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     <!-- ===== GSAP CDN ===== -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 
