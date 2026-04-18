@@ -56,6 +56,36 @@ mobileLinks.forEach(function (link) {
         }, 1500);
     });
 
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Stop page from refreshing
+
+        const data = new FormData(contactForm);
+        
+        // Send the data to Formspree via Fetch
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            // Show your Toast
+            toast.classList.add('show');
+            contactForm.reset(); // Clear the form
+
+            // Hide Toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        } else {
+            alert("Oops! There was a problem submitting your form.");
+        }
+    });
+}
+
   
     // ---- AR buttons ----
     document.querySelectorAll('.menu-card-btn').forEach(function(btn) {

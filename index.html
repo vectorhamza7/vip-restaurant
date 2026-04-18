@@ -421,37 +421,33 @@
 
                     <div class="contact-grid">
                         <!-- Form -->
-                         <form 
-  id="contactForm" 
-  class="contact-form" 
-  action="https://formspree.io/f/xpqkrdnq" 
-  method="POST"
->
-                        <div class="section-hidden">
-                            <form id="contactForm" class="contact-form">
-                                <div class="form-group">
-                                    <label for="fname">Full Name</label>
-                                    <input type="text" id="fname" required placeholder="Your name" class="form-input">
-                                </div>
-                                <div class="form-group">
-                                    <label for="fphone">Phone Number</label>
-                                    <input type="tel" id="fphone" required placeholder="+212 (___) ___-____"
-                                        class="form-input">
-                                </div>
-                                <div class="form-group">
-                                    <label for="femail">Email Address</label>
-                                    <input type="email" id="femail" required placeholder="you@example.com"
-                                        class="form-input">
-                                </div>
-                                <div class="form-group">
-                                    <label for="fmsg">Message</label>
-                                    <textarea id="fmsg" rows="4" placeholder="Special requests, dietary needs..."
-                                        class="form-input"></textarea>
-                                </div>
-                                <button type="submit" class="form-submit btn-shine">Send</button>
-                            </form>
-                        </div>
-                     </form>
+                        <form id="contactForm" class="contact-form" action="https://script.google.com/macros/s/AKfycbzFn3bX8HajWCP4FVPV0LAnOLoS9IJFnDz2E_iYZP6RW4GwNps7PpOuER9o67vUROEKXg/exec" method="POST">
+    <div class="section-hidden">
+        <div class="form-group">
+            <label for="fname">Full Name</label>
+            <input type="text" name="name" id="fname" required placeholder="Your name" class="form-input">
+        </div>
+
+        <div class="form-group">
+            <label for="fphone">Phone Number</label>
+            <input type="tel" name="phone" id="fphone" required placeholder="+212 (___) ___-____" class="form-input">
+        </div>
+
+        <div class="form-group">
+            <label for="femail">Email Address</label>
+            <input type="email" name="_replyto" id="femail" required placeholder="you@example.com" class="form-input">
+        </div>
+
+        <div class="form-group">
+            <label for="fmsg">Message</label>
+            <textarea name="message" id="fmsg" rows="4" placeholder="Special requests, dietary needs..." class="form-input"></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="New Reservation Request - NOIRE">
+        
+        <button type="submit" class="form-submit btn-shine">Send</button>
+    </div>
+</form>
                         <!-- Info -->
                         <div class="section-hidden contact-info">
                             <!-- Hours -->
