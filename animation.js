@@ -1,3 +1,5 @@
+window.onload = () => {
+   
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 let smoother = ScrollSmoother.create({
   wrapper: '#smooth-wrapper',
@@ -171,3 +173,19 @@ let lt5 = gsap.timeline({
 lt5.to(".footer", { duration: 1, y: -900 });
 lt5.from(".footer-frame", { duration: 1, y: 150, opacity: 0 });
 lt5.from(".footer-label", { duration: 2, x: -350, opacity: 1 });
+
+
+// Flip Animation Logic , toggle
+document.querySelectorAll('.card-container').forEach(container => {
+    let isFlipped = false;
+    container.addEventListener('click', () => {
+        isFlipped = !isFlipped;
+        gsap.to(container, {
+            duration: 0.8,
+            rotationY: isFlipped ? 180 : 0, // Flips the container
+            ease: "power2.out" 
+        });
+    });
+});
+
+};

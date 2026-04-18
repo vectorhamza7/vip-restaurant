@@ -61,9 +61,9 @@
             <!-- ====== HERO ====== -->
             <section id="home" class="hero">
                 <div class="hero-bg-overlay">
-                <img src="background.webp" alt="image" class="hero-bg-image">
-                <p class="hero-era anim-up delay-1"><span>1960 </span>2026</p>
-</div>
+                    <img src="background.webp" alt="image" class="hero-bg-image">
+                    <p class="hero-era anim-up delay-1"><span>1960 </span>2026</p>
+                </div>
                 <div class="hero-light"></div>
 
                 <div class="anim-fade">
@@ -137,6 +137,7 @@
 
             <!-- ====== MENU ====== -->
             <section id="menu" class="menu-section">
+
                 <div class="menu-wood-bg"></div>
                 <div class="container menu-content">
                     <div class="menu-header section-hidden">
@@ -150,11 +151,22 @@
                     <div class="menu-grid">
                         <!-- Card 1 -->
                         <div class="menu-card glass-card section-hidden">
+                            <div class="info-window">
+                                <button class="close-info-window">
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                                <h3>Duck Confit Details</h3>
+                                <ul>
+                                    <li><strong>Calories:</strong> 720 kcal</li>
+                                    <li><strong>Ingredients:</strong> Orange zest, star anise, honey glaze.</li>
+                                </ul>
+                            </div>
                             <button class="menu-card-details-icon">
                                 <span class="material-symbols-outlined">
                                     info
                                 </span>
                             </button>
+
                             <div class="menu-card-img-wrap">
                                 <img src="Plat.webp" alt="The Memory - Wagyu beef">
                                 <model-viewer id="model-1" src="model-1-compressed.glb" ios-src="model-ios.usdc" ar
@@ -179,6 +191,18 @@
 
                         <!-- Card 2 -->
                         <div class="menu-card glass-card section-hidden">
+                            <div class="info-window">
+                                <button class="close-info-window">
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                                <h3>The Garden Details</h3>
+                                <ul>
+                                    <li><strong>Calories:</strong> 320 kcal</li>
+                                    <li><strong>Ingredients:</strong> Heirloom baby carrots, salt-baked golden beets,
+                                        minted pea purée, and edible olive soil.</li>
+                                </ul>
+                            </div>
+
                             <button class="menu-card-details-icon">
                                 <span class="material-symbols-outlined">
                                     info
@@ -203,6 +227,17 @@
 
                         <!-- Card 3 -->
                         <div class="menu-card glass-card section-hidden">
+                            <div class="info-window">
+                                <button class="close-info-window">
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                                <h3>The Depth Details</h3>
+                                <ul>
+                                    <li><strong>Calories:</strong> 450 kcal</li>
+                                    <li><strong>Ingredients:</strong> Wild bluefin tuna, yuzu-soy reduction, black
+                                        garlic pearls, and crispy nori.</li>
+                                </ul>
+                            </div>
                             <button class="menu-card-details-icon">
                                 <span class="material-symbols-outlined">
                                     info
@@ -227,6 +262,17 @@
 
                         <!-- Card 4 -->
                         <div class="menu-card glass-card section-hidden">
+                            <div class="info-window">
+                                <button class="close-info-window">
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                                <h3>The Fire Details</h3>
+                                <ul>
+                                    <li><strong>Calories:</strong> 950 kcal</li>
+                                    <li><strong>Ingredients:</strong> Dry-aged duck breast, smoked cherry jus, confit
+                                        potatoes, and thyme jus.</li>
+                                </ul>
+                            </div>
                             <button class="menu-card-details-icon">
                                 <span class="material-symbols-outlined">
                                     info
@@ -251,6 +297,17 @@
 
                         <!-- Card 5 -->
                         <div class="menu-card glass-card section-hidden">
+                            <div class="info-window">
+                                <button class="close-info-window">
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                                <h3>The Earth Details</h3>
+                                <ul>
+                                    <li><strong>Calories:</strong> 580 kcal</li>
+                                    <li><strong>Ingredients:</strong> Carnaroli rice, shaved black truffle, parmesan
+                                        foam, and truffle oil.</li>
+                                </ul>
+                            </div>
                             <button class="menu-card-details-icon">
                                 <span class="material-symbols-outlined">
                                     info
@@ -275,6 +332,17 @@
 
                         <!-- Card 6 -->
                         <div class="menu-card glass-card section-hidden">
+                            <div class="info-window">
+                                <button class="close-info-window">
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                                <h3>The End Details</h3>
+                                <ul>
+                                    <li><strong>Calories:</strong> 1200 kcal</li>
+                                    <li><strong>Ingredients:</strong> 48-hour braised short rib, bone marrow jus,
+                                        truffle-infused potato foam, and micro-herbs.</li>
+                                </ul>
+                            </div>
                             <button class="menu-card-details-icon">
                                 <span class="material-symbols-outlined">
                                     info
@@ -309,17 +377,34 @@
                     </div>
 
                     <div class="gallery-grid section-hidden">
-                        <div class="gallery-frame">
-                            <img src="download (15).webp" alt="Restaurant interior">
+                        <div class="card-container">
+                            <div class="gallery-frame">
+                                <img src="download (15).webp" alt="Restaurant interior">
+                            </div>
+                            <div class="card-face back">
+                                <h3>Where Every Corner Tells a Story.</h3>
+                                <p>Step into a world of curated mystery and timeless elegance. Our lounge blends the soul of a vintage speakeasy with the vibrant energy of a living art gallery. Surrounded by floor-to-ceiling masterpieces and the warm, flickering glow of candlelight, it’s the perfect backdrop for intimate conversations and unforgettable evenings</p>
+                            </div>
                         </div>
-                        <div class="gallery-frame">
-                            <img src="download (17).webp" alt="Plating art">
+                        <div class="card-container">
+                            <div class="gallery-frame">
+                                <img src="download (17).webp" alt="Plating art">
+                            </div>
+                            <div class="card-face back">
+                                <h3>Old-World Soul, Modern Sophistication.</h3>
+                                <p>Retreat into a sanctuary of rich mahogany and deep-tufted leather. This corner of our restaurant is designed for the connoisseur of quiet luxury. Featuring curated antiques, taxidermy art, and a collection of classic literature, it’s a space where time slows down. Whether you're settling in for a pre-dinner aperitif or a late-night digestif, the warm wood tones and soft, ambient lighting create an atmosphere of unrivaled prestige.</p>
+                            </div>
                         </div>
-                        <div class="gallery-frame">
-                            <img src="download (16).webp" alt="Ambiance">
+                        <div class="card-container">
+                            <div class="gallery-frame">
+                                <img src="download (16).webp" alt="Ambiance">
+                            </div>
+                            <div class="card-face back">
+                                <h3>A Canvas for the Senses.</h3>
+                                <p>Surround yourself with the faces and stories that define our spirit. The Portrait Parlor is a celebration of character, combining a curated library of curiosities with velvet textures and low-lit alcoves. It’s an inviting, snug retreat where the glow of the fireplace meets the spark of great conversation. Whether you’re here to get lost in a book or find yourself in the company of friends, every seat is a front-row ticket to our world’s artistic charm.</p>
+                            </div>
                         </div>
                     </div>
-
                     <div class="gallery-label section-hidden">
                         <p id="gallery-p">Gallery</p>
                     </div>
@@ -336,6 +421,12 @@
 
                     <div class="contact-grid">
                         <!-- Form -->
+                         <form 
+  id="contactForm" 
+  class="contact-form" 
+  action="https://formspree.io/f/xpqkrdnq" 
+  method="POST"
+>
                         <div class="section-hidden">
                             <form id="contactForm" class="contact-form">
                                 <div class="form-group">
@@ -360,7 +451,7 @@
                                 <button type="submit" class="form-submit btn-shine">Send</button>
                             </form>
                         </div>
-
+                     </form>
                         <!-- Info -->
                         <div class="section-hidden contact-info">
                             <!-- Hours -->
@@ -473,6 +564,7 @@
     <script src="animation.js"></script>
 
     <script src="main.js"></script>
+
 </body>
 
 </html>

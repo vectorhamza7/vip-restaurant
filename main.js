@@ -1,5 +1,4 @@
  
-    // ---- Mobile Menu ----
    // main.js
 
 // Mobile menu toggle
@@ -26,18 +25,7 @@ mobileLinks.forEach(function (link) {
     });
 });
 
-    // ---- Nav backdrop on scroll ----
-    var navWrapper = document.querySelector('.nav-wrapper');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 80) {
-            navWrapper.style.backdropFilter = 'blur(16px)';
-            navWrapper.style.webkitBackdropFilter = 'blur(16px)';
-        } else {
-            navWrapper.style.backdropFilter = 'none';
-            navWrapper.style.webkitBackdropFilter = 'none';
-        }
-    });
-
+    
     // ---- Contact Form ----
     var contactForm = document.getElementById('contactForm');
     var toast = document.getElementById('toast');
@@ -50,7 +38,7 @@ mobileLinks.forEach(function (link) {
         toast.classList.add('show');
         setTimeout(function() {
             toast.classList.remove('show');
-        }, 3500);
+        }, 2000);
     }
 
     contactForm.addEventListener('submit', function(e) {
@@ -68,17 +56,7 @@ mobileLinks.forEach(function (link) {
         }, 1500);
     });
 
-    // ---- Smooth scroll ----
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            var target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-
+  
     // ---- AR buttons ----
     document.querySelectorAll('.menu-card-btn').forEach(function(btn) {
         btn.addEventListener('click', function() {
@@ -86,4 +64,45 @@ mobileLinks.forEach(function (link) {
             var name = card.querySelector('.menu-card-name').textContent;
             showToast('AR view for "' + name + '" — coming soon!', true);
         });
+    });
+    // ---- Info Window ----
+    const infoIcons = document.querySelectorAll('.menu-card-details-icon');
+    const closeBtns = document.querySelectorAll('.close-info-window');
+
+    // Handle Opening the Window
+    infoIcons.forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents click from bubbling up
+            
+            // Find the specific card this icon belongs to
+            const card = icon.closest('.menu-card');
+            const infoWindow = card.querySelector('.info-window');
+            
+            if (infoWindow) {
+                infoWindow.classList.add('show');
+            }
+        });
+    });
+
+    // Handle Closing the Window
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            // Find the specific card this close button belongs to
+            const card = btn.closest('.menu-card');
+            const infoWindow = card.querySelector('.info-window');
+            
+            if (infoWindow) {
+                infoWindow.classList.remove('show');
+            }
+        });
+    });
+
+    // Optional: Close window if user clicks anywhere outside of it
+    document.addEventListener('click', (e) => {
+        const activeWindow = document.querySelector('.info-window.show');
+        if (activeWindow && !activeWindow.contains(e.target)) {
+            activeWindow.classList.remove('show');
+        }
     });
